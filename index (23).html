@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Dream Space Bluffton | Custom Home Builds & Expert Remodels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+:root{
+  --orange:#E8880E;
+  --orange-light:#F5A535;
+  --orange-pale:#FEF3E2;
+  --navy:#1E2D45;
+  --navy-light:#2A3E5A;
+  --charcoal:#1A1A1A;
+  --gray-900:#111827;
+  --gray-700:#374151;
+  --gray-500:#6B7280;
+  --gray-300:#D1D5DB;
+  --gray-100:#F3F4F6;
+  --gray-50:#FAFAFA;
+  --white:#FFFFFF;
+  --border:#E5E7EB;
+}
+body{font-family:'Inter',sans-serif;color:var(--charcoal);background:var(--white);overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--orange);}
+
+/* ── NAV ── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:76px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5vw;
+  background:rgba(255,255,255,0.97);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow 0.3s;
+}
+#nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.08);}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
+.logo-mark{width:44px;height:44px;object-fit:cover;border-radius:5px;}
+.logo-words{line-height:1.2;}
+.logo-name{font-size:1.05rem;font-weight:700;color:var(--navy);letter-spacing:-0.01em;}
+.logo-city{font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);}
+nav ul{display:flex;align-items:center;gap:1.8rem;list-style:none;}
+nav ul a{font-size:0.82rem;font-weight:500;color:var(--gray-500);text-decoration:none;letter-spacing:0.01em;transition:color 0.2s;}
+nav ul a:hover{color:var(--navy);}
+.nav-quote{
+  background:var(--orange);color:white !important;
+  padding:0.55rem 1.4rem;border-radius:4px;
+  font-weight:600 !important;font-size:0.8rem !important;
+  transition:background 0.2s !important;
+}
+.nav-quote:hover{background:var(--orange-light) !important;}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  padding-top:76px;
+  position:relative;overflow:hidden;
+  max-width:100vw;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:6rem 5vw 6rem 6vw;
+  background:var(--navy);
+  position:relative;z-index:1;
+}
+.hero-left::after{
+  content:'';position:absolute;
+  top:0;right:-60px;bottom:0;width:120px;
+  background:var(--navy);
+  transform:skewX(-4deg);
+  transform-origin:top left;
+  z-index:2;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:0.7rem;font-weight:600;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--orange);
+  margin-bottom:2rem;
+}
+.hero-tag::before{content:'';width:28px;height:1px;background:var(--orange);}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(3.2rem,5.5vw,5.5rem);
+  font-weight:900;line-height:1.0;
+  color:var(--white);
+  letter-spacing:-0.02em;
+  margin-bottom:1.8rem;
+  position:relative;z-index:3;
+}
+.hero h1 span{color:var(--orange);}
+.hero-desc{
+  font-size:1rem;color:rgba(255,255,255,0.6);
+  line-height:1.75;max-width:440px;
+  margin-bottom:2.8rem;position:relative;z-index:3;
+}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;position:relative;z-index:3;}
+.btn-fill{
+  background:var(--orange);color:white;
+  padding:0.85rem 2rem;border-radius:4px;
+  font-size:0.85rem;font-weight:600;
+  text-decoration:none;letter-spacing:0.02em;
+  display:inline-flex;align-items:center;gap:8px;
+  border:2px solid var(--orange);
+  transition:all 0.2s;cursor:pointer;
+}
+.btn-fill:hover{background:var(--orange-light);border-color:var(--orange-light);}
+.btn-line{
+  background:transparent;color:white;
+  padding:0.85rem 2rem;border-radius:4px;
+  font-size:0.85rem;font-weight:600;
+  text-decoration:none;letter-spacing:0.02em;
+  display:inline-flex;align-items:center;gap:8px;
+  border:2px solid rgba(255,255,255,0.25);
+  transition:all 0.2s;cursor:pointer;
+}
+.btn-line:hover{border-color:rgba(255,255,255,0.6);}
+.hero-stats{
+  display:flex;gap:1.5rem;
+  margin-top:3.5rem;padding-top:2.5rem;
+  border-top:1px solid rgba(255,255,255,0.12);
+  position:relative;z-index:3;
+  flex-wrap:wrap;
+  width:100%;
+}
+.hs-num{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:700;color:var(--orange);line-height:1;}
+.hs-label{font-size:0.72rem;color:rgba(255,255,255,0.45);letter-spacing:0.06em;text-transform:uppercase;margin-top:0.25rem;}
+.hero-right{
+  position:relative;overflow:hidden;
+}
+.hero-right img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  display:block;
+}
+.hero-right-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--navy) 0%,transparent 50%);
+  opacity:0.35;
+}
+
+/* ── SECTION BASICS ── */
+section{padding:6rem 6vw;}
+.sec-eyebrow{
+  font-size:0.68rem;font-weight:700;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:0.8rem;
+}
+.sec-h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:700;color:var(--navy);
+  line-height:1.1;letter-spacing:-0.02em;
+}
+.sec-sub{
+  font-size:1rem;color:var(--gray-500);
+  line-height:1.75;max-width:560px;
+  margin-top:1rem;
+}
+.inner{max-width:1240px;margin:0 auto;}
+
+/* ── SERVICES ── */
+.services-sec{background:var(--gray-50);}
+.svc-header{
+  display:flex;justify-content:space-between;
+  align-items:flex-end;margin-bottom:3.5rem;
+  flex-wrap:wrap;gap:1.5rem;
+}
+.svc-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+.svc-card{
+  background:var(--white);
+  border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);
+  transition:box-shadow 0.3s,transform 0.3s;
+  cursor:pointer;
+}
+.svc-card:hover{
+  box-shadow:0 12px 40px rgba(0,0,0,0.1);
+  transform:translateY(-4px);
+}
+.svc-img{height:220px;overflow:hidden;}
+.svc-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 0.5s;
+}
+.svc-card:hover .svc-img img{transform:scale(1.05);}
+.svc-body{padding:1.8rem;}
+.svc-num{
+  font-size:0.65rem;font-weight:700;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:0.5rem;
+}
+.svc-body h3{
+  font-family:'Fraunces',serif;
+  font-size:1.35rem;font-weight:700;
+  color:var(--navy);margin-bottom:0.7rem;
+  letter-spacing:-0.01em;
+}
+.svc-body p{font-size:0.875rem;color:var(--gray-500);line-height:1.7;margin-bottom:1.2rem;}
+.svc-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:0.8rem;font-weight:600;
+  color:var(--orange);text-decoration:none;
+  transition:gap 0.2s;
+}
+.svc-card:hover .svc-link{gap:10px;}
+
+/* ── BEFORE / AFTER ── */
+.ba-sec{background:var(--navy);color:white;}
+.ba-sec .sec-h2{color:white;}
+.ba-sec .sec-sub{color:rgba(255,255,255,0.5);}
+.ba-header{
+  display:flex;justify-content:space-between;
+  align-items:flex-end;margin-bottom:3.5rem;
+  flex-wrap:wrap;gap:1.5rem;
+}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.ba-card{background:rgba(255,255,255,0.05);border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);}
+.ba-wrap{position:relative;height:260px;overflow:hidden;cursor:col-resize;user-select:none;}
+.ba-after,.ba-before{position:absolute;inset:0;background-size:cover;background-position:center;}
+.ba-before{clip-path:inset(0 50% 0 0);}
+.ba-handle{
+  position:absolute;top:0;bottom:0;left:50%;
+  width:2px;background:var(--orange);
+  transform:translateX(-50%);z-index:10;
+}
+.ba-handle-btn{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:38px;height:38px;background:var(--orange);
+  border-radius:50%;display:flex;
+  align-items:center;justify-content:center;
+  font-size:10px;color:white;letter-spacing:-2px;font-weight:900;
+}
+.ba-lbl{
+  position:absolute;top:12px;z-index:5;
+  font-size:0.62rem;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  padding:3px 9px;border-radius:3px;
+}
+.ba-lbl.before{left:12px;background:rgba(0,0,0,0.55);color:rgba(255,255,255,0.7);}
+.ba-lbl.after{right:12px;background:var(--orange);color:white;}
+.ba-info{padding:1.2rem 1.4rem;}
+.ba-info h4{font-size:0.95rem;font-weight:600;color:white;margin-bottom:0.2rem;}
+.ba-info p{font-size:0.78rem;color:rgba(255,255,255,0.45);}
+
+/* ── SPLIT BAND (Why Us) ── */
+.split-sec{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:500px;
+}
+.split-img{overflow:hidden;position:relative;}
+.split-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.split-content{
+  background:var(--orange-pale);
+  padding:6rem 5vw;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.split-content .sec-h2{color:var(--navy);}
+.why-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.5rem;}
+.why-item{display:flex;gap:1.2rem;align-items:flex-start;}
+.why-icon{
+  width:42px;height:42px;flex-shrink:0;
+  background:var(--orange);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+}
+.why-icon svg{width:20px;height:20px;fill:white;}
+.why-item h4{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:0.3rem;}
+.why-item p{font-size:0.85rem;color:var(--gray-500);line-height:1.65;}
+
+/* ── PROCESS ── */
+.process-sec{background:var(--white);}
+.process-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:0;margin-top:3.5rem;position:relative;
+}
+.process-grid::before{
+  content:'';position:absolute;
+  top:26px;left:10%;right:10%;height:1px;
+  background:var(--border);
+}
+.process-step{
+  display:flex;flex-direction:column;
+  align-items:center;text-align:center;
+  padding:0 1rem;position:relative;
+}
+.ps-num{
+  width:52px;height:52px;
+  background:var(--white);border:2px solid var(--border);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.95rem;font-weight:700;color:var(--gray-300);
+  margin-bottom:1.2rem;position:relative;z-index:1;
+  transition:all 0.3s;
+}
+.process-step:hover .ps-num{
+  border-color:var(--orange);color:var(--orange);
+  box-shadow:0 0 0 6px var(--orange-pale);
+}
+.ps-title{font-size:0.85rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem;}
+.ps-desc{font-size:0.78rem;color:var(--gray-500);line-height:1.6;}
+
+/* ── AI ESTIMATOR ── */
+.est-sec{background:var(--navy);}
+.est-sec .sec-h2{color:white;}
+.est-sec .sec-sub{color:rgba(255,255,255,0.5);}
+.est-inner{
+  display:grid;grid-template-columns:1fr 1.15fr;
+  gap:6rem;align-items:start;
+  margin-top:3.5rem;
+}
+.est-ai-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(232,136,14,0.4);
+  color:var(--orange);padding:0.35rem 0.9rem;
+  border-radius:50px;font-size:0.68rem;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;
+  margin-bottom:1.5rem;
+}
+.est-ai-badge::before{
+  content:'';width:6px;height:6px;background:var(--orange);
+  border-radius:50%;animation:blink 1.8s infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+.est-card{
+  background:var(--white);border-radius:12px;padding:2.5rem;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+.est-card-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.3rem;}
+.est-card-sub{font-size:0.82rem;color:var(--gray-500);margin-bottom:2rem;}
+.est-opts{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-bottom:1.5rem;}
+.est-opt{
+  border:1.5px solid var(--border);border-radius:8px;
+  padding:0.85rem 1rem;cursor:pointer;
+  display:flex;align-items:center;gap:10px;
+  background:transparent;transition:all 0.2s;
+}
+.est-opt:hover,.est-opt.sel{border-color:var(--orange);background:var(--orange-pale);}
+.est-opt-icon{font-size:1.2rem;}
+.est-opt-txt{font-size:0.82rem;font-weight:600;color:var(--navy);}
+.est-row{margin-bottom:1.4rem;}
+.est-row label{
+  display:block;font-size:0.68rem;font-weight:700;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--gray-500);margin-bottom:0.45rem;
+}
+.est-row select{
+  width:100%;padding:0.75rem 1rem;
+  border:1.5px solid var(--border);border-radius:6px;
+  font-family:'Inter',sans-serif;font-size:0.88rem;
+  color:var(--navy);background:white;cursor:pointer;appearance:none;
+}
+.est-row select:focus{outline:none;border-color:var(--orange);}
+.est-result-box{
+  background:var(--navy);border-radius:8px;
+  padding:1.2rem 1.4rem;
+  display:flex;align-items:center;
+  justify-content:space-between;
+  margin-bottom:1rem;
+}
+.erb-label{font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.25rem;}
+.erb-val{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;color:var(--orange);line-height:1;}
+.erb-right{text-align:right;}
+.erb-time{font-size:0.78rem;color:rgba(255,255,255,0.45);}
+.est-msg{font-size:0.82rem;color:var(--gray-500);font-style:italic;line-height:1.6;min-height:2.4em;margin-bottom:1.4rem;transition:all 0.3s;}
+
+/* ── GALLERY ── */
+.gallery-sec{background:var(--gray-50);}
+.gal-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem;}
+.gallery-mosaic{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:220px;
+  gap:8px;
+}
+.gm-item{overflow:hidden;border-radius:6px;position:relative;cursor:pointer;}
+.gm-item:nth-child(1){grid-column:span 5;grid-row:span 2;}
+.gm-item:nth-child(2){grid-column:span 4;}
+.gm-item:nth-child(3){grid-column:span 3;}
+.gm-item:nth-child(4){grid-column:span 3;}
+.gm-item:nth-child(5){grid-column:span 4;}
+.gm-item:nth-child(6){grid-column:span 5;}
+.gm-item:nth-child(7){grid-column:span 4;}
+.gm-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 0.5s;display:block;
+}
+.gm-item:hover img{transform:scale(1.06);}
+.gm-overlay{
+  position:absolute;inset:0;background:transparent;
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.3s;
+}
+.gm-item:hover .gm-overlay{background:rgba(232,136,14,0.25);}
+.gm-plus{color:white;font-size:2.5rem;font-weight:100;opacity:0;transition:opacity 0.3s;}
+.gm-item:hover .gm-plus{opacity:1;}
+
+/* ── ABOUT ── */
+.about-sec{background:var(--white);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.about-img-col{position:relative;}
+.about-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block;border-radius:8px;}
+.about-accent-box{
+  position:absolute;bottom:-20px;right:-20px;
+  background:var(--orange);
+  padding:1.5rem 1.8rem;border-radius:8px;
+  text-align:center;
+}
+.aab-num{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:900;color:white;line-height:1;}
+.aab-txt{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-top:0.2rem;}
+.about-content{padding-right:2rem;}
+.about-blockquote{
+  font-family:'Fraunces',serif;
+  font-size:1.25rem;font-weight:700;font-style:italic;
+  color:var(--navy);line-height:1.4;
+  border-left:4px solid var(--orange);
+  padding-left:1.5rem;margin:2rem 0;
+}
+.about-body p{font-size:0.9rem;color:var(--gray-500);line-height:1.85;margin-bottom:1.1rem;}
+.about-details{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1rem;margin-top:2rem;
+}
+.ad-item{background:var(--gray-50);border-radius:6px;padding:1rem 1.2rem;border:1px solid var(--border);}
+.ad-label{font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:0.25rem;}
+.ad-val{font-size:0.9rem;font-weight:600;color:var(--navy);}
+
+/* ── TESTIMONIALS ── */
+.test-sec{background:var(--gray-50);}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+.test-card{
+  background:var(--white);border-radius:8px;
+  padding:2rem;border:1px solid var(--border);
+  transition:box-shadow 0.3s;
+}
+.test-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08);}
+.stars{display:flex;gap:3px;margin-bottom:1.2rem;}
+.star{
+  width:14px;height:14px;background:var(--orange);
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+.test-quote{font-size:0.88rem;color:var(--gray-700);line-height:1.75;font-style:italic;margin-bottom:1.4rem;}
+.test-name{font-size:0.82rem;font-weight:700;color:var(--navy);}
+.test-loc{font-size:0.75rem;color:var(--gray-500);margin-top:0.2rem;}
+
+/* ── FACEBOOK ── */
+.fb-sec{background:var(--white);}
+.fb-inner-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:start;
+  margin-top:3.5rem;
+}
+.fb-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fb-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:8px;overflow:hidden;
+  transition:box-shadow 0.3s;
+}
+.fb-card:hover{box-shadow:0 8px 30px rgba(0,0,0,0.08);}
+.fb-card-hdr{display:flex;align-items:center;gap:9px;padding:0.9rem 1rem;border-bottom:1px solid var(--border);}
+.fb-av{
+  width:34px;height:34px;background:var(--navy);
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:0.78rem;
+  font-weight:700;color:var(--orange);flex-shrink:0;
+}
+.fb-card-name{font-size:0.82rem;font-weight:700;color:var(--navy);}
+.fb-card-date{font-size:0.7rem;color:var(--gray-500);}
+.fb-card-img{width:100%;height:130px;object-fit:cover;display:block;}
+.fb-card-body{padding:0.9rem 1rem;}
+.fb-card-text{font-size:0.8rem;color:var(--gray-700);line-height:1.55;margin-bottom:0.7rem;}
+.fb-card-reacts{
+  display:flex;justify-content:space-between;
+  font-size:0.72rem;color:var(--gray-500);
+  padding-top:0.65rem;border-top:1px solid var(--border);
+}
+.fb-right{display:flex;flex-direction:column;justify-content:center;padding:2rem 0;}
+.fb-right h3{
+  font-family:'Fraunces',serif;
+  font-size:1.8rem;font-weight:700;color:var(--navy);
+  line-height:1.15;margin-bottom:1rem;
+}
+.fb-right p{font-size:0.9rem;color:var(--gray-500);line-height:1.75;margin-bottom:2rem;}
+.fb-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#1877F2;color:white;
+  padding:0.8rem 1.8rem;border-radius:6px;
+  font-size:0.82rem;font-weight:600;
+  text-decoration:none;transition:background 0.2s;
+  width:fit-content;
+}
+.fb-btn:hover{background:#0d65d8;}
+
+/* ── CTA STRIP ── */
+.cta-strip{
+  background:var(--orange);padding:5rem 6vw;
+  position:relative;overflow:hidden;
+}
+.cta-strip::after{
+  content:'DS';
+  position:absolute;right:-2%;top:50%;
+  transform:translateY(-50%);
+  font-family:'Fraunces',serif;
+  font-size:28vw;font-weight:900;
+  color:rgba(255,255,255,0.06);
+  pointer-events:none;line-height:0.8;
+}
+.cta-inner{
+  max-width:1240px;margin:0 auto;
+  display:flex;justify-content:space-between;
+  align-items:center;position:relative;z-index:1;
+  flex-wrap:wrap;gap:2.5rem;
+}
+.cta-inner h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2rem,4.5vw,3.8rem);
+  font-weight:700;color:white;
+  line-height:1.1;letter-spacing:-0.02em;
+}
+.cta-inner h2 em{font-style:normal;opacity:0.7;}
+.cta-inner p{font-size:1rem;color:rgba(255,255,255,0.75);margin-top:0.5rem;}
+.cta-actions{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;}
+.cta-phone-link{
+  font-family:'Fraunces',serif;
+  font-size:2.2rem;font-weight:700;
+  color:white;text-decoration:none;letter-spacing:-0.01em;
+  transition:opacity 0.2s;
+}
+.cta-phone-link:hover{opacity:0.8;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:5rem 6vw 2.5rem;}
+.footer-inner{max-width:1240px;margin:0 auto;}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:3.5rem;padding-bottom:4rem;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  margin-bottom:2.5rem;
+}
+.footer-brand-logo{margin-bottom:1.2rem;}
+.footer-brand-logo img{height:52px;width:auto;object-fit:contain;}
+.footer-tagline{font-size:0.875rem;color:rgba(255,255,255,0.4);line-height:1.75;max-width:290px;}
+.footer-social{display:flex;gap:0.6rem;margin-top:1.5rem;}
+.fsoc{
+  width:36px;height:36px;background:rgba(255,255,255,0.07);
+  border-radius:6px;display:flex;align-items:center;
+  justify-content:center;text-decoration:none;
+  transition:background 0.2s;
+}
+.fsoc:hover{background:var(--orange);}
+.footer-col-title{font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:1.4rem;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:0.65rem;}
+.footer-col ul a{font-size:0.85rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
+.footer-col ul a:hover{color:var(--orange);}
+.footer-contact-item{font-size:0.85rem;color:rgba(255,255,255,0.4);margin-bottom:0.8rem;line-height:1.5;}
+.footer-contact-item a{color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
+.footer-contact-item a:hover{color:var(--orange);}
+.fci-lbl{font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:0.15rem;}
+.footer-bottom{
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:1rem;
+  font-size:0.78rem;color:rgba(255,255,255,0.2);
+}
+.footer-bottom a{color:rgba(255,255,255,0.2);text-decoration:none;}
+
+/* ── CHAT ── */
+.chat{position:fixed !important;bottom:1.5rem;right:1.5rem;left:auto;top:auto;z-index:9999 !important;touch-action:none;}
+
+/* Desktop chat bubble */
+.chat-btn{
+  width:58px;height:58px;background:var(--orange);
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;cursor:pointer;border:none;
+  box-shadow:0 4px 24px rgba(232,136,14,0.45);
+  transition:all 0.3s;
+}
+.chat-btn:hover{background:var(--orange-light);transform:scale(1.05);}
+.chat-btn svg{width:24px;height:24px;fill:white;}
+
+/* Desktop chat panel */
+.chat-box{
+  display:none;
+  flex-direction:column;
+  position:absolute;
+  bottom:72px;right:0;
+  width:380px;
+  height:520px;
+  background:white;
+  border-radius:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.2);
+  overflow:hidden;
+  border:1px solid var(--border);
+}
+.chat-box.open{display:flex;}
+.chat-msgs{
+  flex:1 1 auto;
+  height:0;
+  min-height:0;
+  overflow-y:auto;
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.65rem;
+  background:var(--gray-50);
+}
+
+/* MOBILE: full screen overlay */
+@media(max-width:768px){
+  .chat{
+    position:fixed !important;
+    bottom:1.2rem !important;
+    right:1.2rem !important;
+    z-index:9999 !important;
+  }
+  .chat-box{
+    position:fixed !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    width:100% !important;
+    height:100% !important;
+    border-radius:0 !important;
+    z-index:9998 !important;
+  }
+  .chat-box.open{display:flex !important;}
+  .chat-box-hdr{
+    padding:1.2rem 1.2rem !important;
+    padding-top:max(1.2rem, env(safe-area-inset-top)) !important;
+  }
+  .chat-msgs{
+    flex:1 !important;
+    height:auto !important;
+    max-height:none !important;
+  }
+  .chat-input input{font-size:16px !important;} /* prevents zoom on iOS */
+}
+
+.chat-box-hdr{
+  background:var(--navy);padding:1rem 1.2rem;
+  display:flex;align-items:center;gap:10px;
+  border-bottom:3px solid var(--orange);
+}
+.chat-box-hdr-icon{
+  width:34px;height:34px;background:var(--orange);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.chat-box-hdr-icon svg{width:16px;height:16px;fill:white;}
+.chat-hname{font-size:0.9rem;font-weight:700;color:white;}
+.chat-hstatus{font-size:0.7rem;color:#4ade80;display:flex;align-items:center;gap:4px;}
+.chat-hstatus::before{content:'';width:5px;height:5px;background:#4ade80;border-radius:50%;}
+.chat-msgs{
+  height:210px;overflow-y:auto;
+  padding:1rem;display:flex;flex-direction:column;gap:0.65rem;
+  background:var(--gray-50);
+}
+.cmsg{
+  max-width:86%;padding:0.6rem 0.9rem;
+  border-radius:10px;font-size:0.83rem;line-height:1.5;
+}
+.cmsg.bot{
+  background:white;color:var(--gray-700);
+  border:1px solid var(--border);
+  border-bottom-left-radius:2px;align-self:flex-start;
+}
+.cmsg.user{
+  background:var(--orange);color:white;
+  border-bottom-right-radius:2px;align-self:flex-end;
+}
+.ctyping{
+  display:flex;gap:4px;align-items:center;
+  padding:0.6rem 0.9rem;background:white;
+  border:1px solid var(--border);border-radius:10px;
+  border-bottom-left-radius:2px;
+  align-self:flex-start;width:fit-content;
+}
+.ctyping span{width:6px;height:6px;background:var(--orange);border-radius:50%;animation:bounce 1.1s infinite;}
+.ctyping span:nth-child(2){animation-delay:0.2s;}
+.ctyping span:nth-child(3){animation-delay:0.4s;}
+.chat-sugg{
+  display:flex;flex-wrap:wrap;gap:0.35rem;
+  padding:0.7rem 1rem;background:white;
+  border-top:1px solid var(--border);
+}
+.cs{
+  background:var(--gray-50);border:1px solid var(--border);
+  border-radius:50px;padding:0.28rem 0.7rem;
+  font-size:0.72rem;cursor:pointer;color:var(--gray-700);
+  transition:all 0.2s;font-family:'Inter',sans-serif;
+}
+.cs:hover{border-color:var(--orange);color:var(--orange);}
+.chat-input{display:flex;border-top:1px solid var(--border);}
+.chat-input input{
+  flex:1;border:none;padding:0.85rem 1rem;
+  font-family:'Inter',sans-serif;font-size:0.85rem;
+  color:var(--charcoal);outline:none;background:white;
+}
+.chat-input input::placeholder{color:var(--gray-300);}
+.chat-send{
+  background:var(--orange);border:none;
+  padding:0 1.1rem;color:white;cursor:pointer;
+  font-size:1rem;transition:background 0.2s;
+}
+.chat-send:hover{background:var(--orange-light);}
+
+/* ── LIGHTBOX ── */
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;}
+.lb.open{display:flex;}
+.lb img{max-width:88vw;max-height:84vh;object-fit:contain;border-radius:4px;}
+.lb-x{position:absolute;top:1.5rem;right:2rem;color:white;font-size:2rem;font-weight:100;cursor:pointer;background:none;border:none;opacity:0.5;transition:opacity 0.2s;}
+.lb-x:hover{opacity:1;}
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.reveal.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.1s;}
+.d2{transition-delay:0.2s;}
+.d3{transition-delay:0.3s;}
+
+/* ── HERO ANIMATION ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.ha1{opacity:0;animation:fadeUp 0.7s 0.3s forwards;}
+.ha2{opacity:0;animation:fadeUp 0.7s 0.5s forwards;}
+.ha3{opacity:0;animation:fadeUp 0.7s 0.7s forwards;}
+.ha4{opacity:0;animation:fadeUp 0.7s 0.9s forwards;}
+.ha5{opacity:0;animation:fadeUp 0.7s 1.1s forwards;}
+
+/* ── MOBILE ── */
+@media(max-width:960px){
+  /* Global overflow fix */
+  html,body{overflow-x:hidden;max-width:100vw;}
+  *{max-width:100%;}
+  
+  /* Nav */
+  #nav{padding:0 1.2rem;height:64px;}
+  #nav ul{display:none;}
+  .logo img{height:44px !important;}
+  
+  /* Hero */
+  .hero{grid-template-columns:1fr;min-height:85vh;}
+  .hero-right{display:none !important;width:0 !important;overflow:hidden !important;}
+  .hero-left{padding:3rem 1.4rem 4rem;text-align:center;align-items:center;display:flex;flex-direction:column;justify-content:center;}
+  .hero-eyebrow{justify-content:center;}
+  .hero h1{font-size:clamp(2.8rem,12vw,4rem);text-align:center;}
+  .hero-desc{font-size:0.9rem;text-align:center;margin:1rem auto 2rem;}
+  .hero-btns{flex-direction:column;gap:0.75rem;width:100%;align-items:center;}
+  .hero-stats{justify-content:center;gap:2rem;}
+  .btn-fill,.btn-line,.btn-white,.btn-orange,.btn-ghost{width:100%;justify-content:center;padding:0.85rem 1rem;}
+  
+  /* Sections */
+  section{padding:3.5rem 1.4rem;}
+  .sec-h2{font-size:clamp(1.8rem,7vw,2.5rem);}
+  
+  /* Grids → single column */
+  .svc-grid,.ba-grid,.test-grid,.why-grid{grid-template-columns:1fr;}
+  .split-sec{grid-template-columns:1fr;}
+  .split-img{height:280px;}
+  .process-grid{grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .process-grid::before{display:none;}
+  .est-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .about-grid{grid-template-columns:1fr;}
+  .about-accent-box{display:none;}
+  .footer-top{grid-template-columns:1fr;gap:2rem;}
+  .cta-inner{flex-direction:column;gap:2rem;}
+  .cta-actions{align-items:flex-start;}
+  .fb-inner-grid,.fb-cards{grid-template-columns:1fr;}
+  
+  /* Gallery */
+  .gallery-mosaic{
+    grid-template-columns:1fr 1fr !important;
+    grid-auto-rows:160px !important;
+  }
+  .gm-item:nth-child(n){grid-column:span 1 !important;grid-row:span 1 !important;}
+  
+  /* Map section - CRITICAL FIX */
+  #contact .inner > div{
+    grid-template-columns:1fr !important;
+    gap:2rem !important;
+  }
+  #contact iframe{
+    width:100% !important;
+    max-width:100% !important;
+    height:280px !important;
+  }
+  
+  /* Contact info cards full width */
+  #contact .inner > div > div:first-child{
+    padding-right:0 !important;
+  }
+  
+  /* CTA strip */
+  .cta-strip{padding:4rem 1.4rem;}
+  .cta-strip::after{display:none;}
+  .cta-phone-link{font-size:1.6rem;}
+  
+  /* Footer */
+  footer{padding:3rem 1.4rem 2rem;}
+  .footer-bottom{flex-direction:column;text-align:center;gap:0.5rem;}
+  
+  /* Estimator card */
+  .est-card{padding:1.5rem;}
+  .est-opts{grid-template-columns:1fr 1fr;}
+  
+  /* About section */
+  .about-photo{aspect-ratio:4/3 !important;max-height:300px;}
+  .about-content{padding-right:0 !important;}
+  
+  /* Testimonials */
+  .test-grid{grid-template-columns:1fr !important;}
+  
+  /* Process */
+  .process-sec .inner > div:last-child{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* Extra small phones */
+@media(max-width:480px){
+  .hero h1{font-size:2.6rem;}
+  .sec-h2{font-size:1.7rem;}
+  .process-grid{grid-template-columns:1fr !important;}
+  .est-opts{grid-template-columns:1fr 1fr;}
+  .cta-phone-link{font-size:1.3rem;}
+  #contact iframe{height:220px !important;}
+}
+
+/* Contact section mobile fix */
+@media(max-width:768px){
+  #contact > div > div[style*="grid-template-columns"]{
+    grid-template-columns:1fr !important;
+    gap:2rem !important;
+  }
+  #contact iframe{
+    height:260px !important;
+  }
+  .split-content{padding:3rem 1.4rem;}
+}
+
+/* ===== MOBILE MASTER OVERRIDE ===== */
+@media(max-width:768px){
+
+  /* Prevent ALL horizontal overflow */
+  html,body{overflow-x:hidden !important;width:100% !important;}
+  *{box-sizing:border-box !important;}
+
+  /* Hero - fully centered */
+  .hero-left{
+    text-align:center !important;
+    align-items:center !important;
+    padding:3.5rem 1.2rem 4rem !important;
+  }
+  .hero h1{
+    text-align:center !important;
+    font-size:clamp(2.5rem,11vw,3.5rem) !important;
+    width:100% !important;
+  }
+  .hero-eyebrow{justify-content:center !important;}
+  .hero-desc{
+    text-align:center !important;
+    max-width:100% !important;
+    width:100% !important;
+  }
+  .hero-btns{
+    width:100% !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0.75rem !important;
+  }
+  .hero-stats{
+    justify-content:center !important;
+    gap:1.2rem !important;
+    width:100% !important;
+    flex-wrap:nowrap !important;
+  }
+  .hs-num{font-size:2rem !important;}
+  .hs-label{font-size:0.65rem !important;}
+
+  /* Frank.ai chat - full width anchored to bottom */
+  .chat{
+    position:fixed !important;
+    bottom:1.2rem !important;
+    right:1.2rem !important;
+    z-index:9999 !important;
+  }
+  .chat-panel{
+    position:fixed !important;
+    bottom:76px !important;
+    right:0.5rem !important;
+    left:0.5rem !important;
+    width:auto !important;
+    max-width:none !important;
+    border-radius:12px !important;
+    z-index:9999 !important;
+  }
+  .chat-msgs{height:180px !important;}
+  .chat-box-hdr{padding:0.8rem 1rem !important;}
+  .chat-sugg{padding:0.5rem 0.8rem !important;}
+  .chat-sugg .cs{font-size:0.7rem !important;padding:0.25rem 0.5rem !important;}
+
+  /* Buttons full width */
+  .btn-fill,.btn-line,.btn-ghost,.btn-orange,.btn-white{
+    width:100% !important;
+    justify-content:center !important;
+    padding:0.9rem 1rem !important;
+  }
+
+  /* Sections padding */
+  section,.sec{padding:3rem 1.2rem !important;}
+
+  /* Map */
+  #contact iframe{
+    height:240px !important;
+    width:100% !important;
+  }
+}
+  /* Hero stats - prevent cutoff */
+  .hero-stats{
+    display:grid !important;
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:0.5rem !important;
+    width:100% !important;
+    text-align:center !important;
+  }
+  .hstat{
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:2px !important;
+  }
+  .hs-num{font-size:1.8rem !important;}
+  .hs-label{font-size:0.6rem !important;max-width:none !important;text-align:center !important;}
+
+  /* Fix Frank.ai bubble - fixed to screen, draggable */
+  .chat{
+    position:fixed !important;
+    bottom:1.2rem;
+    right:1.2rem;
+    left:auto;
+    top:auto;
+    z-index:9999 !important;
+  }
+
+
+  /* Frank chat - mobile full screen */
+  .chat-box{
+    position:fixed !important;
+    top:0 !important;left:0 !important;
+    right:0 !important;bottom:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-height:100% !important;
+    border-radius:0 !important;
+    flex-direction:column !important;
+  }
+  .chat-box .chat-msgs{
+    flex:1 1 auto !important;
+    height:0 !important;
+    min-height:0 !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch !important;
+    padding:1rem !important;
+  }
+  .chat-box .chat-box-hdr{flex-shrink:0 !important;}
+  .chat-box .chat-sugg{flex-shrink:0 !important;}
+  .chat-box .chat-input{
+    flex-shrink:0 !important;
+    padding-bottom:env(safe-area-inset-bottom) !important;
+  }
+  .chat-box .chat-input input{font-size:16px !important;}
+/* ===== END MOBILE OVERRIDE ===== */
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo" style="display:flex;align-items:center;text-decoration:none;">
+    <img src="data:image/jpeg;base64,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" alt="Dream Space Bluffton" style="height:58px;width:auto;object-fit:contain;border-radius:6px;">
+  </a>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#transformations">Before &amp; After</a></li>
+    <li><a href="#estimator">Estimator</a></li>
+    <li><a href="#gallery">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:8433684425" style="color:var(--navy);font-weight:600;">843.368.4425</a></li>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="nav-quote">Free Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag ha1">Bluffton &amp; Jasper County, SC</div>
+    <h1 class="ha2">
+      We Build<br>
+      Homes That<br>
+      <span>Last.</span>
+    </h1>
+    <p class="hero-desc ha3">Custom home builds, kitchen &amp; bath remodels, and expert renovations. Over 20 years of Lowcountry craftsmanship by people who treat your home like their own.</p>
+    <div class="hero-btns ha4">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="btn-fill">
+        Get a Free Quote
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#gallery" class="btn-line">
+        View Our Work
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats ha5">
+      <div>
+        <div class="hs-num">20+</div>
+        <div class="hs-label">Years Local</div>
+      </div>
+      <div>
+        <div class="hs-num">500+</div>
+        <div class="hs-label">Projects Done</div>
+      </div>
+      <div>
+        <div class="hs-num">2</div>
+        <div class="hs-label">Counties Served</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right" style="position:relative;overflow:hidden;max-width:100%;">
+    <video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-right-overlay" style="position:absolute;inset:0;background:linear-gradient(135deg,var(--navy) 0%,transparent 50%);opacity:0.35;z-index:1;"></div>
+  </div>
+</section>
+
+<!-- VIDEO SHOWCASE -->
+<section style="background:var(--navy);padding:5rem 6vw;">
+  <div style="max-width:1240px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--orange);margin-bottom:0.8rem;">Dream Space in Action</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:white;line-height:1.1;letter-spacing:-0.02em;">See Our Work Come to Life</h2>
+      <p style="font-size:1rem;color:rgba(255,255,255,0.45);line-height:1.75;max-width:520px;margin:1rem auto 0;">Real projects, real craftsmanship — from the Dream Space team in Bluffton &amp; Jasper County.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+      <div style="border-radius:8px;overflow:hidden;position:relative;">
+        <video autoplay loop muted playsinline style="width:100%;height:320px;object-fit:cover;display:block;">
+          <source src="project2.mp4" type="video/mp4">
+        </video>
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(12,12,12,0.85),transparent);padding:1.5rem 1.2rem;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:0.3rem;">Project Highlight</div>
+          <div style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:white;">Custom Build — Bluffton, SC</div>
+        </div>
+      </div>
+      <div style="border-radius:8px;overflow:hidden;position:relative;">
+        <video autoplay loop muted playsinline style="width:100%;height:320px;object-fit:cover;display:block;">
+          <source src="project1.mp4" type="video/mp4">
+        </video>
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(12,12,12,0.85),transparent);padding:1.5rem 1.2rem;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:0.3rem;">Project Highlight</div>
+          <div style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:white;">Renovation &amp; Remodel — Jasper County</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-sec" id="services">
+  <div class="inner">
+    <div class="svc-header reveal">
+      <div>
+        <div class="sec-eyebrow">What We Do</div>
+        <h2 class="sec-h2">Our Services</h2>
+        <p class="sec-sub">From custom builds to full remodels — expert craftsmanship for every project.</p>
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="btn-fill">Get a Free Quote</a>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/1980e92a-43c0-454f-9caa-63992782148b/IMG_0891+%281%29.jpeg" alt="Custom Home Builds" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-num">01 — New Construction</div>
+          <h3>Custom Home Builds</h3>
+          <p>Your vision, built from the ground up. We handle every detail — from design to your final walkthrough — with top-tier craftsmanship.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="svc-link">Start Your Build → </a>
+        </div>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="svc-img"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/c34698a1-07e7-48e3-92e3-58cb2347e383/IMG_0892.jpeg" alt="Kitchen Bath" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-num">02 — Remodeling</div>
+          <h3>Kitchen &amp; Bath Remodels</h3>
+          <p>Modern cabinetry, countertops, tile work and fixtures that completely transform your most-used and most-valued spaces.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="svc-link">Remodel Now → </a>
+        </div>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-img"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/20b00112-3fcc-4bb6-8eea-8d0ed82a6c23/IMG_0175.jpeg" alt="Renovations" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-num">03 — Renovations</div>
+          <h3>Renovations &amp; Additions</h3>
+          <p>Extra rooms, home offices, living space expansions — seamlessly blended with your existing home's character and structure.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="svc-link">Plan Your Addition → </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba-sec" id="transformations">
+  <div class="inner">
+    <div class="ba-header reveal">
+      <div>
+        <div class="sec-eyebrow" style="color:var(--orange-light)">Real Results</div>
+        <h2 class="sec-h2">Before &amp; After</h2>
+        <p class="sec-sub">Drag the handle to reveal the transformation on real Dream Space projects.</p>
+      </div>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card reveal">
+        <div class="ba-wrap" data-slider>
+          <div class="ba-after" style="background-image:url('https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/be9bb5e3-a42f-4985-be6e-d2479b624a3f/IMG_2045.jpeg')"></div>
+          <div class="ba-before" style="background-image:url('https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/a7323166-19e6-4678-ac6d-624c31ae57be/IMG_0891.jpeg')"></div>
+          <div class="ba-handle"><div class="ba-handle-btn">◀▶</div></div>
+          <span class="ba-lbl before">Before</span><span class="ba-lbl after">After</span>
+        </div>
+        <div class="ba-info"><h4>Kitchen Remodel</h4><p>Cabinetry, countertops &amp; full layout redesign</p></div>
+      </div>
+      <div class="ba-card reveal d1">
+        <div class="ba-wrap" data-slider>
+          <div class="ba-after" style="background-image:url('https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/89c801e7-a768-4877-be66-4886beb4b69c/IMG_1341.jpeg')"></div>
+          <div class="ba-before" style="background-image:url('https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/647fd60a-15cb-467d-92a7-df38d8c1cd5f/IMG_1140.jpeg')"></div>
+          <div class="ba-handle"><div class="ba-handle-btn">◀▶</div></div>
+          <span class="ba-lbl before">Before</span><span class="ba-lbl after">After</span>
+        </div>
+        <div class="ba-info"><h4>Interior Renovation</h4><p>Full overhaul — flooring, finishes &amp; layout</p></div>
+      </div>
+      <div class="ba-card reveal d2">
+        <div class="ba-wrap" data-slider>
+          <div class="ba-after" style="background-image:url('https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/5ce3a942-0c24-4efc-9df6-814cce724c79/IMG_1661.jpeg')"></div>
+          <div class="ba-before" style="background-image:url('https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/b3cc6f0c-295e-4b6d-9ebd-60014b89bc93/IMG_1549.jpeg')"></div>
+          <div class="ba-handle"><div class="ba-handle-btn">◀▶</div></div>
+          <span class="ba-lbl before">Before</span><span class="ba-lbl after">After</span>
+        </div>
+        <div class="ba-info"><h4>Room Addition</h4><p>Seamless addition blended with existing architecture</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US SPLIT -->
+<div class="split-sec" id="why">
+  <div class="split-img">
+    <img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/49f68200-f098-4795-95a1-cc72b6398980/402853063_669644181982768_3121945920273057650_n.jpg" alt="Mark DeVaney">
+  </div>
+  <div class="split-content">
+    <div class="reveal">
+      <div class="sec-eyebrow">Our Difference</div>
+      <h2 class="sec-h2">Why Choose<br>Dream Space?</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-item reveal d1">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div>
+          <h4>Expert Craftsmanship</h4>
+          <p>20+ years of experience building quality homes in Bluffton and Jasper County. We never cut corners — ever.</p>
+        </div>
+      </div>
+      <div class="why-item reveal d2">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div>
+          <h4>Client-Centered Approach</h4>
+          <p>Open communication and full transparency from the first call to final walkthrough. Your satisfaction is everything.</p>
+        </div>
+      </div>
+      <div class="why-item reveal d3">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div>
+          <h4>True Local Expertise</h4>
+          <p>Born and raised in Beaufort County for 20+ years. We know Lowcountry permits, codes, and coastal construction.</p>
+        </div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div>
+          <h4>Premium Materials Only</h4>
+          <p>We use only top-quality materials because your home deserves it — and because we'd use the same in our own.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section class="process-sec" id="process">
+  <div class="inner">
+    <div style="text-align:center" class="reveal">
+      <div class="sec-eyebrow">How It Works</div>
+      <h2 class="sec-h2">Our Process</h2>
+      <p class="sec-sub" style="margin:1rem auto 0">Simple, transparent, and stress-free from start to finish.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal"><div class="ps-num">01</div><div class="ps-title">Free Consultation</div><div class="ps-desc">We visit your site — free, no pressure, no obligation.</div></div>
+      <div class="process-step reveal d1"><div class="ps-num">02</div><div class="ps-title">Design &amp; Plan</div><div class="ps-desc">Collaborate on design, materials, and a clear timeline.</div></div>
+      <div class="process-step reveal d2"><div class="ps-num">03</div><div class="ps-title">Permits &amp; Prep</div><div class="ps-desc">We handle all local permits and site prep for you.</div></div>
+      <div class="process-step reveal d3"><div class="ps-num">04</div><div class="ps-title">Expert Build</div><div class="ps-desc">Precision construction with regular progress updates.</div></div>
+      <div class="process-step reveal"><div class="ps-num">05</div><div class="ps-title">Final Walkthrough</div><div class="ps-desc">We don't leave until you love every single detail.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AI ESTIMATOR -->
+<section class="est-sec" id="estimator">
+  <div class="inner">
+    <div class="reveal">
+      <div class="est-ai-badge">AI-Powered Tool</div>
+      <div class="sec-eyebrow" style="color:rgba(255,255,255,0.5)">Smart Planning</div>
+      <h2 class="sec-h2">Instant Project Estimate</h2>
+      <p class="sec-sub">Get a realistic cost range in seconds — no forms, no waiting. Based on typical Bluffton/Jasper County project costs.</p>
+    </div>
+    <div class="est-inner">
+      <div class="reveal">
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.55);line-height:1.85;margin-bottom:2rem;">Select your project type and scope below. Our estimator will give you a ballpark range to help you plan your budget and timeline.</p>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.25);line-height:1.6;">* These are estimates for planning purposes only. Final pricing always requires a free on-site quote from our team.</p>
+        <div style="margin-top:2.5rem;">
+          <a href="tel:8433684425" class="btn-line" style="font-size:0.9rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.23 19.79 19.79 0 0 1 1.61 4.67 2 2 0 0 1 3.58 2.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.05a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 17.5l-.08-.58z"/></svg>
+            Call 843.368.4425
+          </a>
+        </div>
+      </div>
+      <div class="est-card reveal d1">
+        <div class="est-card-title">What Are You Planning?</div>
+        <div class="est-card-sub">Pick a project type, then select scope.</div>
+        <div class="est-opts" id="eopts">
+          <div class="est-opt sel" data-type="kitchen" onclick="selType(this)"><div class="est-opt-icon">🍳</div><div class="est-opt-txt">Kitchen Remodel</div></div>
+          <div class="est-opt" data-type="bath" onclick="selType(this)"><div class="est-opt-icon">🛁</div><div class="est-opt-txt">Bath Remodel</div></div>
+          <div class="est-opt" data-type="addition" onclick="selType(this)"><div class="est-opt-icon">🏗️</div><div class="est-opt-txt">Home Addition</div></div>
+          <div class="est-opt" data-type="custom" onclick="selType(this)"><div class="est-opt-icon">🏠</div><div class="est-opt-txt">Custom Build</div></div>
+        </div>
+        <div class="est-row">
+          <label>Project Scope</label>
+          <select id="escope" onchange="updEst()">
+            <option value="small">Small / Basic</option>
+            <option value="medium" selected>Medium / Standard</option>
+            <option value="large">Large / Premium</option>
+          </select>
+        </div>
+        <div class="est-result-box">
+          <div>
+            <div class="erb-label">Estimated Range</div>
+            <div class="erb-val" id="eval">$18K – $38K</div>
+          </div>
+          <div class="erb-right">
+            <div class="erb-time" id="etime">⏱ 4 – 8 weeks</div>
+            <div class="erb-time" id="escope-lbl" style="color:rgba(255,255,255,0.25);margin-top:4px">Standard scope</div>
+          </div>
+        </div>
+        <p class="est-msg" id="emsg">Standard kitchen remodels include cabinetry, countertops, and appliance updates — one of the best home value investments you can make.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="btn-fill" style="width:100%;justify-content:center">
+          Get My Free On-Site Quote
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec" id="gallery">
+  <div class="inner">
+    <div class="gal-hdr reveal">
+      <div>
+        <div class="sec-eyebrow">Portfolio</div>
+        <h2 class="sec-h2">Our Work</h2>
+        <p class="sec-sub">A sample of recent Dream Space projects across Bluffton &amp; Jasper County.</p>
+      </div>
+      <a href="https://www.dreamspacebluffton.com/ourwork" target="_blank" class="btn-fill">View All Projects</a>
+    </div>
+    <div class="gallery-mosaic reveal">
+      <div class="gm-item" onclick="openLB(this)"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/be9bb5e3-a42f-4985-be6e-d2479b624a3f/IMG_2045.jpeg" alt="" loading="lazy"><div class="gm-overlay"><div class="gm-plus">+</div></div></div>
+      <div class="gm-item" onclick="openLB(this)"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/89c801e7-a768-4877-be66-4886beb4b69c/IMG_1341.jpeg" alt="" loading="lazy"><div class="gm-overlay"><div class="gm-plus">+</div></div></div>
+      <div class="gm-item" onclick="openLB(this)"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/a3a43e8e-c263-4b1c-86b4-63f88b0bb2fd/IMG_2218.jpeg" alt="" loading="lazy"><div class="gm-overlay"><div class="gm-plus">+</div></div></div>
+      <div class="gm-item" onclick="openLB(this)"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/5ce3a942-0c24-4efc-9df6-814cce724c79/IMG_1661.jpeg" alt="" loading="lazy"><div class="gm-overlay"><div class="gm-plus">+</div></div></div>
+      <div class="gm-item" onclick="openLB(this)"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/3dab4b4c-64c5-4f47-b060-200ed732ec62/IMG_3146.JPG" alt="" loading="lazy"><div class="gm-overlay"><div class="gm-plus">+</div></div></div>
+      <div class="gm-item" onclick="openLB(this)"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/40e378fb-91eb-4c29-a7bd-70df0c0c1fd2/IMG_0175.jpeg" alt="" loading="lazy"><div class="gm-overlay"><div class="gm-plus">+</div></div></div>
+      <div class="gm-item" onclick="openLB(this)"><img src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/9549a840-3a7f-41da-b251-b34031cb0ec4/IMG_1138.jpeg" alt="" loading="lazy"><div class="gm-overlay"><div class="gm-plus">+</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-sec" id="about">
+  <div class="inner about-grid">
+    <div class="about-img-col reveal">
+            <video class="about-photo" autoplay loop muted playsinline style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;display:block;">
+        <source src="family.mp4" type="video/mp4">
+      </video>
+      <div class="about-accent-box">
+        <div class="aab-num">20+</div>
+        <div class="aab-txt">Years Local</div>
+      </div>
+    </div>
+    <div class="about-content reveal d1">
+      <div class="sec-eyebrow">Meet the Team</div>
+      <h2 class="sec-h2">Built on Trust,<br>Family &amp; Local Pride</h2>
+      <div class="about-blockquote">"We treat your house as if it were our own."</div>
+      <div class="about-body">
+        <p>We are Mark and Keri DeVaney, and we've called Beaufort County home for over two decades. We live in the Bluffton area with our 5 children and love to travel and spend time with our family.</p>
+        <p>Our business is committed to quality and the attention to detail we expect in our own home. Whether it's a kitchen refresh or a full custom build, we bring the same level of care to every project.</p>
+      </div>
+      <div class="about-details">
+        <div class="ad-item"><div class="ad-label">Location</div><div class="ad-val">Bluffton, SC 29910</div></div>
+        <div class="ad-item"><div class="ad-label">Phone</div><div class="ad-val"><a href="tel:8433684425" style="color:inherit;text-decoration:none">843.368.4425</a></div></div>
+        <div class="ad-item"><div class="ad-label">Service Area</div><div class="ad-val">Bluffton &amp; Jasper Co.</div></div>
+        <div class="ad-item"><div class="ad-label">Experience</div><div class="ad-val">20+ Years Local</div></div>
+      </div>
+      <div style="margin-top:2rem">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="btn-fill">
+          Let's Work Together
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="test-sec" id="reviews">
+  <div class="inner">
+    <div class="reveal" style="text-align:center">
+      <div class="sec-eyebrow">Client Reviews</div>
+      <h2 class="sec-h2">What Our Clients Say</h2>
+      <p class="sec-sub" style="margin:1rem auto 0">Real feedback from real Bluffton &amp; Jasper County homeowners.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="test-quote">"Mark and his team completely transformed our kitchen. The quality is incredible — they truly treated our home like their own. We couldn't be happier."</p>
+        <div class="test-name">Jennifer &amp; Tom R.</div>
+        <div class="test-loc">Bluffton, SC — Kitchen Remodel</div>
+      </div>
+      <div class="test-card reveal d1">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="test-quote">"We hired Dream Space for a master bath renovation and a room addition. Communication was excellent throughout. Finished on time and the work is flawless."</p>
+        <div class="test-name">Carlos &amp; Maria S.</div>
+        <div class="test-loc">Jasper County, SC — Bath &amp; Addition</div>
+      </div>
+      <div class="test-card reveal d2">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="test-quote">"Best decision we ever made. Dream Space built our custom home exactly as we envisioned. 20 years of experience really shows — every detail was perfect."</p>
+        <div class="test-name">The Williams Family</div>
+        <div class="test-loc">Bluffton, SC — Custom Home Build</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACEBOOK -->
+<section class="fb-sec" id="facebook">
+  <div class="inner">
+    <div class="fb-inner-grid">
+      <div class="reveal">
+        <div class="sec-eyebrow">Social Media</div>
+        <h3 class="fb-right">
+          <span style="font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.15;display:block;">Follow Us on<br>Facebook</span>
+        </h3>
+        <p style="font-size:0.9rem;color:var(--gray-500);line-height:1.75;margin:1rem 0 2rem">See behind-the-scenes builds, before &amp; after reveals, and updates straight from the Dream Space team in Bluffton.</p>
+        <a href="https://www.facebook.com/dreamspacebluffton" target="_blank" class="fb-btn">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Follow @dreamspacebluffton
+        </a>
+      </div>
+      <div class="fb-cards reveal d1">
+        <div class="fb-card">
+          <div class="fb-card-hdr"><div class="fb-av">DS</div><div><div class="fb-card-name">Dream Space Bluffton</div><div class="fb-card-date">Bluffton, SC</div></div></div>
+          <img class="fb-card-img" src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/26f9665e-1719-4e5b-a7a6-5184c04ea998/IMG_2045.jpeg" alt="">
+          <div class="fb-card-body">
+            <p class="fb-card-text">Another beautiful project completed in Bluffton! Our team poured their heart into every detail of this transformation. 🏠✨</p>
+            <div class="fb-card-reacts"><span>👍 ❤️ 42</span><span>8 comments</span></div>
+          </div>
+        </div>
+        <div class="fb-card">
+          <div class="fb-card-hdr"><div class="fb-av">DS</div><div><div class="fb-card-name">Dream Space Bluffton</div><div class="fb-card-date">Bluffton, SC</div></div></div>
+          <img class="fb-card-img" src="https://images.squarespace-cdn.com/content/v1/656251dd8b42113768dc9049/89c801e7-a768-4877-be66-4886beb4b69c/IMG_1341.jpeg" alt="">
+          <div class="fb-card-body">
+            <p class="fb-card-text">Kitchen remodel complete for a wonderful Jasper County family. New cabinets, counters &amp; custom tile throughout. 🍳</p>
+            <div class="fb-card-reacts"><span>👍 ❤️ 67</span><span>14 comments</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT & MAP -->
+<section id="contact" style="background:var(--gray-50);padding:6rem 6vw;">
+  <div style="max-width:1240px;margin:0 auto;">
+
+    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;">
+
+      <!-- Left: contact info -->
+      <div>
+        <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--orange);margin-bottom:0.8rem;">Find Us</div>
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:var(--navy);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1rem;">Proudly Serving<br>Bluffton &amp; Jasper County</h2>
+        <p style="font-size:0.95rem;color:var(--gray-500);line-height:1.75;margin-bottom:2.5rem;">We come to you — free on-site consultations across Bluffton, Jasper County, and the surrounding Lowcountry area. No travel fees, no pressure.</p>
+
+        <!-- Info cards -->
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem;">
+
+          <div style="display:flex;align-items:center;gap:1rem;background:white;border:1px solid var(--border);border-radius:8px;padding:1rem 1.2rem;">
+            <div style="width:42px;height:42px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="white"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:0.15rem;">Service Area</div>
+              <div style="font-size:0.92rem;font-weight:600;color:var(--navy);">Bluffton, SC 29910 &amp; Jasper County</div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:1rem;background:white;border:1px solid var(--border);border-radius:8px;padding:1rem 1.2rem;">
+            <div style="width:42px;height:42px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.23 19.79 19.79 0 0 1 1.61 4.67 2 2 0 0 1 3.58 2.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.05a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 17.5l-.08-.58z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:0.15rem;">Phone</div>
+              <a href="tel:8433684425" style="font-size:0.92rem;font-weight:600;color:var(--navy);text-decoration:none;">843.368.4425</a>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:1rem;background:white;border:1px solid var(--border);border-radius:8px;padding:1rem 1.2rem;">
+            <div style="width:42px;height:42px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:0.15rem;">Facebook</div>
+              <a href="https://www.facebook.com/dreamspacebluffton" target="_blank" style="font-size:0.92rem;font-weight:600;color:var(--navy);text-decoration:none;">@dreamspacebluffton</a>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:1rem;background:white;border:1px solid var(--border);border-radius:8px;padding:1rem 1.2rem;">
+            <div style="width:42px;height:42px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:0.15rem;">Hours</div>
+              <div style="font-size:0.92rem;font-weight:600;color:var(--navy);">Mon – Fri: 7am – 6pm</div>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" style="background:var(--orange);color:white;padding:0.9rem 2rem;border-radius:4px;font-size:0.85rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--orange);transition:all 0.2s;">
+          Get a Free Quote
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Right: Google Map -->
+      <div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+          <iframe
+            title="Dream Space Bluffton Service Area"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53156.82!2d-80.9399!3d32.2337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fc0a7e5a9e1a4b%3A0x4e1b2b7e8a3f1c2d!2sBluffton%2C%20SC%2029910!5e0!3m2!1sen!2sus!4v1716900000000!5m2!1sen!2sus"
+            width="100%"
+            height="440"
+            style="border:0;display:block;max-width:100%;width:100%;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.75rem;text-align:center;line-height:1.5;">
+          📍 Serving Bluffton, SC 29910 &amp; all of Jasper County — We come to you for your free consultation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="cta-inner">
+    <div>
+      <h2>Ready to Build Your<br><em>Dream Space?</em></h2>
+      <p>Serving Bluffton &amp; Jasper County — free on-site consultations, no pressure.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="tel:8433684425" class="cta-phone-link">843.368.4425</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank" class="btn-fill" style="background:white;color:var(--orange);border-color:white">
+        Get My Free Quote
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-logo">
+          <img src="data:image/jpeg;base64,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" alt="Dream Space Bluffton" style="height:54px;width:auto;object-fit:contain;border-radius:6px;">
+        </div>
+        <p class="footer-tagline">Bluffton &amp; Jasper County's premier home builders and remodelers. 20+ years of craftsmanship, honesty, and homes built to last.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/dreamspacebluffton" target="_blank" class="fsoc">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="tel:8433684425" class="fsoc">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.23 19.79 19.79 0 0 1 1.61 4.67 2 2 0 0 1 3.58 2.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.05a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 17.5l-.08-.58z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <ul>
+          <li><a href="#services">Custom Home Builds</a></li>
+          <li><a href="#services">Kitchen Remodels</a></li>
+          <li><a href="#services">Bath Remodels</a></li>
+          <li><a href="#services">Home Additions</a></li>
+          <li><a href="#services">Renovations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Our Work</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#estimator">Cost Estimator</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScVnD6TK8TTIAx0NuuJ72y13quPL-ElbQU1B0XDSPFz6720vw/viewform" target="_blank">Free Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><div class="fci-lbl">Location</div>Bluffton, SC 29910</div>
+        <div class="footer-contact-item"><div class="fci-lbl">Phone</div><a href="tel:8433684425">843.368.4425</a></div>
+        <div class="footer-contact-item"><div class="fci-lbl">Service Area</div>Bluffton &amp; Jasper County, SC</div>
+        <div class="footer-contact-item"><div class="fci-lbl">Follow Us</div><a href="https://www.facebook.com/dreamspacebluffton" target="_blank">@dreamspacebluffton</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Dream Space Bluffton LLC. All rights reserved.</span>
+      <span>Proudly serving Bluffton &amp; Jasper County, SC</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLB()">
+  <button class="lb-x">✕</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<!-- CHAT -->
+<div class="chat">
+  <div class="chat-box" id="chatBox">
+    <div class="chat-box-hdr">
+      <div class="chat-box-hdr-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div style="flex:1;">
+        <div class="chat-hname">Frank.ai</div>
+        <div class="chat-hstatus">Online — Ready to Help</div>
+      </div>
+      <button onclick="tc()" style="background:rgba(255,255,255,0.15);border:none;color:white;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">✕</button>
+    </div>
+    <div class="chat-msgs" id="cmsgs">
+      <div class="cmsg bot">Hey there! I'm Frank, project consultant for Dream Space Bluffton. 👋 Are you thinking about a remodel, an addition, or a new custom home — or just starting to explore?</div>
+    </div>
+    <div class="chat-sugg" id="csugg">
+      <span class="cs" onclick="qs(this)">Kitchen remodel</span>
+      <span class="cs" onclick="qs(this)">Bathroom remodel</span>
+      <span class="cs" onclick="qs(this)">Home addition</span>
+      <span class="cs" onclick="qs(this)">Custom home build</span>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="cin" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')sc()">
+      <button class="chat-send" onclick="sc()">➤</button>
+    </div>
+  </div>
+  <button class="chat-btn" id="frankBtn" aria-label="Open Frank.ai chat">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+</div>
+
+<script>
+// ── PAGE INIT ──
+window.addEventListener('load', function(){
+  const w = document.querySelector('.chat');
+  if(w){ w.style.left='auto'; w.style.top='auto'; w.style.right='1.5rem'; w.style.bottom='1.5rem'; }
+});
+
+// ── SCROLL REVEAL ──
+const rvs = document.querySelectorAll('.reveal');
+new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vis'); });
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'})
+.observe ? rvs.forEach(el=>new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'}).observe(el)) : null;
+const rObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+rvs.forEach(el=>rObs.observe(el));
+
+// ── NAV ──
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);
+});
+
+// ── BEFORE/AFTER SLIDERS ──
+document.querySelectorAll('[data-slider]').forEach(c=>{
+  const bf=c.querySelector('.ba-before'),h=c.querySelector('.ba-handle');
+  let d=false;
+  const sp=x=>{const r=c.getBoundingClientRect();let p=Math.min(Math.max((x-r.left)/r.width*100,1),99);bf.style.clipPath=`inset(0 ${100-p}% 0 0)`;h.style.left=p+'%';};
+  c.addEventListener('mousedown',e=>{d=true;sp(e.clientX);});
+  window.addEventListener('mousemove',e=>{if(d)sp(e.clientX);});
+  window.addEventListener('mouseup',()=>d=false);
+  c.addEventListener('touchstart',e=>{d=true;sp(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('touchmove',e=>{if(d)sp(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('touchend',()=>d=false);
+});
+
+// ── ESTIMATOR ──
+const ED={
+  kitchen:{small:{v:'$8K – $18K',t:'2–4 weeks',s:'Basic refresh',m:'Paint, hardware, fixtures and minor updates. Great entry point for a refreshed kitchen.'},medium:{v:'$18K – $38K',t:'4–8 weeks',s:'Standard scope',m:'Cabinetry, countertops and appliance updates — one of the best home-value investments you can make.'},large:{v:'$38K – $75K+',t:'8–14 weeks',s:'Full premium',m:'Custom cabinetry, premium counters, structural changes — a true showpiece kitchen.'}},
+  bath:{small:{v:'$5K – $12K',t:'1–3 weeks',s:'Basic refresh',m:'Fixtures, vanity, tile refresh and paint. Clean updated feel at an accessible price.'},medium:{v:'$12K – $28K',t:'3–6 weeks',s:'Standard scope',m:'Full tile work, new vanity, shower overhaul and quality fixtures throughout.'},large:{v:'$28K – $60K+',t:'6–12 weeks',s:'Luxury spa',m:'Walk-in shower, soaking tub, custom tile, heated floors — hotel-quality at home.'}},
+  addition:{small:{v:'$30K – $60K',t:'8–12 weeks',s:'Small addition',m:'Sunroom, office or small bedroom seamlessly blended with your existing home.'},medium:{v:'$60K – $130K',t:'12–20 weeks',s:'Mid-size',m:'Master suite, garage or multi-room expansion with full quality finishes.'},large:{v:'$130K – $280K+',t:'20–36 weeks',s:'Major expansion',m:'Full second story or large-scale addition — a complete home transformation.'}},
+  custom:{small:{v:'$180K – $280K',t:'6–9 months',s:'Starter custom',m:'Efficient custom build up to ~1,400 sq ft with personalized design and quality finishes.'},medium:{v:'$280K – $480K',t:'9–14 months',s:'Mid custom',m:'1,400–2,800 sq ft fully personalized home with custom layout and finishes.'},large:{v:'$480K – $900K+',t:'14–22 months',s:'Luxury custom',m:"2,800+ sq ft luxury custom build — the Dream Space signature experience."}}
+};
+let ct='kitchen';
+function selType(el){document.querySelectorAll('.est-opt').forEach(o=>o.classList.remove('sel'));el.classList.add('sel');ct=el.dataset.type;updEst();}
+function updEst(){const s=document.getElementById('escope').value,d=ED[ct][s];document.getElementById('eval').textContent=d.v;document.getElementById('etime').textContent='⏱ '+d.t;document.getElementById('escope-lbl').textContent=d.s;document.getElementById('emsg').textContent=d.m;}
+
+// ── LIGHTBOX ──
+function openLB(el){document.getElementById('lb-img').src=el.querySelector('img').src;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLB(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+
+// ══════════════════════════════════════
+// ── FRANK.AI — Smart Conversation ──
+// ══════════════════════════════════════
+
+let frankContext = null; // tracks what Frank is discussing
+
+function tc(){
+  const box = document.getElementById('chatBox');
+  box.classList.toggle('open');
+  if(box.classList.contains('open')){
+    setTimeout(()=>{
+      scrollToBottom();
+      adjustChatForKeyboard();
+    }, 100);
+  }
+}
+
+// ── FRANK MOBILE KEYBOARD FIX ──
+function scrollToBottom(){
+  const msgs = document.getElementById('cmsgs');
+  if(msgs) msgs.scrollTop = msgs.scrollHeight;
+}
+
+function adjustChatForKeyboard(){
+  if(window.innerWidth > 768) return;
+  const box = document.getElementById('chatBox');
+  if(!box || !box.classList.contains('open')) return;
+  if(!window.visualViewport) return;
+
+  // Pin chat to exactly the visible viewport above keyboard
+  const vv = window.visualViewport;
+  box.style.position = 'fixed';
+  box.style.top      = vv.offsetTop + 'px';
+  box.style.left     = '0';
+  box.style.right    = '0';
+  box.style.bottom   = 'auto';
+  box.style.height   = vv.height + 'px';
+  box.style.width    = '100%';
+
+  // Scroll messages to bottom so latest is visible
+  scrollToBottom();
+  setTimeout(scrollToBottom, 100);
+}
+
+// Fire on every viewport resize (keyboard up/down)
+if(window.visualViewport){
+  window.visualViewport.addEventListener('resize', adjustChatForKeyboard);
+  window.visualViewport.addEventListener('scroll', adjustChatForKeyboard);
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  const inp = document.getElementById('cin');
+  if(!inp) return;
+  inp.addEventListener('focus', function(){
+    setTimeout(adjustChatForKeyboard, 100);
+    setTimeout(adjustChatForKeyboard, 400);
+  });
+  inp.addEventListener('blur', function(){
+    if(window.innerWidth > 768) return;
+    const box = document.getElementById('chatBox');
+    if(!box) return;
+    // Reset when keyboard closes
+    setTimeout(()=>{
+      box.style.top    = '0';
+      box.style.bottom = '0';
+      box.style.height = '100%';
+      scrollToBottom();
+    }, 150);
+  });
+});
+
+function addMsg(text, type){
+  const msgs = document.getElementById('cmsgs');
+  const d = document.createElement('div');
+  d.className = 'cmsg ' + type;
+  d.textContent = text;
+  msgs.appendChild(d);
+  // Always scroll to bottom, then adjust for keyboard
+  scrollToBottom();
+  setTimeout(()=>{
+    adjustChatForKeyboard();
+    scrollToBottom();
+  }, 150);
+}
+
+function showTyping(){
+  const msgs = document.getElementById('cmsgs');
+  const d = document.createElement('div');
+  d.className = 'ctyping'; d.id = 'ctyp';
+  d.innerHTML = '<span></span><span></span><span></span>';
+  msgs.appendChild(d);
+  scrollToBottom();
+}
+
+function rmTyping(){ const t = document.getElementById('ctyp'); if(t) t.remove(); }
+
+function pickRandom(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+function getFrankReply(msg){
+  const m = msg.toLowerCase().trim();
+
+  // ── Greetings ──
+  if(/^(hi+|hey+|hello+|howdy|hola|good\s*(morning|afternoon|evening)|yo+|hiya|sup|what.?s up|greetings)$/.test(m)){
+    frankContext = 'greeted';
+    return pickRandom([
+      "Hey there! Great to hear from you. 😊 I'm Frank, project consultant here at Dream Space Bluffton. Are you thinking about a remodel, an addition, or maybe a brand new custom home?",
+      "Hi! Welcome to Dream Space Bluffton — I'm Frank. Whether you're just starting to explore ideas or you have something specific in mind, I'm here to help. What's going on with your home?",
+      "Hey, welcome! I'm Frank with Dream Space. We work with homeowners all across Bluffton, Hilton Head, and the Lowcountry. What kind of project are you thinking about?"
+    ]);
+  }
+
+  // ── Yes / Affirmatives ──
+  if(/^(yes+|yeah+|yep|yup|sure|ok+|okay|absolutely|definitely|correct|right|sounds good|i do|i am|i would|i will)$/.test(m)){
+    if(frankContext === 'kitchen_discovery') return "Great! Tell me a little more — is this a full gut renovation or more of an update to what's already there? And what's the biggest thing bothering you about the kitchen right now?";
+    if(frankContext === 'bath_discovery') return "Perfect. So walk me through it — is this a master bath, a guest bath, or something else? And what are you hoping to change most about the space?";
+    if(frankContext === 'quote_offered') return "Wonderful! The easiest way is to fill out the quick form on this page, or call Mark directly at 843.368.4425. He'll set up a free on-site visit — no pressure at all. Would you like to know what to expect at that first meeting?";
+    if(frankContext === 'custom_discovery') return "Exciting! Building a custom home is one of the most rewarding things you can do. Tell me — do you already have a lot in mind, or are you starting from scratch?";
+    return "Sounds good! Tell me more about what you're working with — I want to make sure I point you in the right direction. What space or project are you thinking about?";
+  }
+
+  // ── No / Unsure ──
+  if(/^(no+|nope|nah|not really|not sure|maybe|i don.?t know|idk|hmm+|not yet|just looking|just browsing|just exploring)$/.test(m)){
+    frankContext = 'exploring';
+    return "No worries at all — totally fine to just explore! 😊 A lot of homeowners start here just getting a feel for things. Is there any space in your home that's been bugging you, or something you've been dreaming about changing?";
+  }
+
+  // ── Kitchen ──
+  if(m.includes('kitchen')){
+    frankContext = 'kitchen_discovery';
+    return pickRandom([
+      "Oh nice — kitchen projects are honestly some of my favorite. They completely transform how a home feels. Tell me about yours — what's working, and what would you love to change?",
+      "Kitchen remodels are one of the best investments you can make in a home out here. What's driving the project — is it the layout, the finishes, storage, all of the above?",
+      "Great choice. Kitchens can range a lot in scope and cost depending on what you're going for. Before I give you any numbers, can I ask — are you thinking a refresh or a full transformation?"
+    ]);
+  }
+
+  // ── Bathroom ──
+  if(m.includes('bath') || m.includes('shower') || m.includes('restroom') || m.includes('toilet')){
+    frankContext = 'bath_discovery';
+    return pickRandom([
+      "Bathroom remodels are huge — they add real value and just make everyday life better. Is this a master bath, a guest bath, or maybe both? And what's the current setup like?",
+      "I love a good bathroom transformation. 😊 Before we talk numbers, help me understand the space — what are you most unhappy with about it right now?",
+      "Great project. Bathrooms can vary quite a bit in cost depending on size, layout changes, and finishes. Walk me through it — what are you hoping to end up with?"
+    ]);
+  }
+
+  // ── Closet ──
+  if(m.includes('closet') || m.includes('storage') || m.includes('wardrobe')){
+    frankContext = 'closet_discovery';
+    return "Closet design is actually one of our specialties — and it makes such a difference day to day. Are you looking to organize an existing closet or build something new? And is this for a master bedroom, a hallway, or somewhere else?";
+  }
+
+  // ── Addition ──
+  if(m.includes('addition') || m.includes('add on') || m.includes('add-on') || m.includes('expand') || m.includes('extension')){
+    frankContext = 'addition_discovery';
+    return "Home additions are exciting because you're literally gaining living space. What kind of addition are you thinking — an extra bedroom, a larger living area, maybe a garage? And is the goal more space, more value, or both?";
+  }
+
+  // ── Custom home / new build ──
+  if(m.includes('custom') || m.includes('new home') || m.includes('new build') || m.includes('build a home') || m.includes('build my')){
+    frankContext = 'custom_discovery';
+    return "Building a custom home from the ground up — that's a big exciting step! Dream Space handles the whole process from design to final walkthrough. Do you already have land, or are you still in the early planning phase?";
+  }
+
+  // ── Renovation general ──
+  if(m.includes('renovate') || m.includes('renovation') || m.includes('remodel') || m.includes('upgrade') || m.includes('fix up') || m.includes('update')){
+    frankContext = 'renovation_discovery';
+    return "Renovation projects can cover a lot of ground — tell me more about what you have in mind. Is there a specific room or area you're focused on, or are you thinking more of a whole-home refresh?";
+  }
+
+  // ── Cost / price ──
+  if(m.includes('cost') || m.includes('price') || m.includes('how much') || m.includes('budget') || m.includes('expensive') || m.includes('afford') || m.includes('cheap')){
+    return "Great question — and honestly, cost depends a lot on the specifics of your project. A bathroom refresh might start around $12K while a full kitchen transformation can go $75K+. Rather than throw numbers at you, can I ask — what space are you looking at and what's driving the project? That'll help me give you a much more useful ballpark.";
+  }
+
+  // ── Timeline ──
+  if(m.includes('how long') || m.includes('timeline') || m.includes('how fast') || m.includes('when') || m.includes('start') || (m.includes('time') && !m.includes('first'))){
+    return "Timelines really depend on scope — a bathroom refresh can wrap up in 2–3 weeks, while a full kitchen remodel typically takes 6–10 weeks, and a custom home build is usually 9–18 months. What kind of project are you working with? I can give you a more specific idea.";
+  }
+
+  // ── Quote / consultation ──
+  if(m.includes('quote') || m.includes('estimate') || m.includes('consult') || m.includes('free') || m.includes('appointment') || m.includes('visit')){
+    frankContext = 'quote_offered';
+    return "Absolutely — Dream Space offers free on-site consultations with zero pressure. Mark will come out, take a look at the space, and give you real numbers based on what he actually sees. You can fill out the quick form on this page or call him directly at 843.368.4425. Want to know what to expect from that first visit?";
+  }
+
+  // ── Service area ──
+  if(m.includes('area') || m.includes('location') || m.includes('serve') || m.includes('bluffton') || m.includes('hilton head') || m.includes('hardeeville') || m.includes('beaufort') || m.includes('jasper') || m.includes('okatie') || m.includes('lowcountry') || m.includes('where')){
+    return "Dream Space serves all of the Lowcountry — Bluffton, Hilton Head Island, Hardeeville, Okatie, Beaufort, and Jasper County. Mark and Keri have lived here for over 20 years so they know the area, the codes, and what works in coastal South Carolina. Where is your project located?";
+  }
+
+  // ── About Dream Space ──
+  if(m.includes('who are') || m.includes('about you') || m.includes('about dream') || m.includes('tell me about') || m.includes('mark') || m.includes('owner') || m.includes('company') || m.includes('team')){
+    return "Dream Space Bluffton is a locally owned company — founded by Mark and Keri DeVaney who've called Beaufort County home for over 20 years. They have 5 kids and treat every project like it's their own home. 20+ years of experience, quality materials, clear communication, and free consultations. What would you like to know more about?";
+  }
+
+  // ── Why Dream Space ──
+  if(m.includes('why') && (m.includes('dream space') || m.includes('you') || m.includes('choose') || m.includes('pick'))){
+    return "Honestly, the biggest thing is trust. Mark and Keri live here — this is their community too. They've been building and remodeling homes in the Lowcountry for over 20 years. You get personalized service, quality craftsmanship, and someone who actually shows up and communicates clearly. No runaround. Is there something specific you're trying to evaluate?";
+  }
+
+  // ── Contact ──
+  if(m.includes('phone') || m.includes('call') || m.includes('number') || m.includes('contact') || m.includes('reach') || m.includes('email') || m.includes('facebook')){
+    return "Best way to reach the team is to call Mark directly at 843.368.4425 — he's very approachable and easy to talk to. You can also fill out the free quote form on this page or find them on Facebook at @dreamspacebluffton. What works best for you?";
+  }
+
+  // ── Thanks ──
+  if(m.includes('thank') || m.includes('appreciate') || m.includes('helpful') || m.includes('awesome') || m.includes('perfect') || m.includes('amazing') || m.includes('great job')){
+    return "Of course — happy to help! 😊 That's what I'm here for. Is there anything else you'd like to know, or are you ready to take the next step and set up a free consultation?";
+  }
+
+  // ── Bye ──
+  if(m.includes('bye') || m.includes('goodbye') || m.includes('talk later') || m.includes('gotta go') || m.includes('see you') || m.includes('take care')){
+    return "Take care! 👋 Whenever you're ready to move forward — whether that's today or six months from now — Dream Space is here. You can always reach Mark at 843.368.4425. Hope to hear from you soon!";
+  }
+
+  // ── How are you ──
+  if(m.includes('how are you') || m.includes('how are things') || (m === "you good") || (m === "you ok")){
+    return "Doing great, thanks for asking! 😄 Always love talking about home projects. What's on your mind today?";
+  }
+
+  // ── What can you do ──
+  if(m.includes('what can you') || m.includes('what do you do') || m.includes('can you help') || m.includes('help me')){
+    return "Absolutely! I can walk you through Dream Space's services, help you understand what a project might cost, talk through timelines, or just help you figure out what questions to ask. I'm also happy to help you set up a free consultation with Mark. What would be most helpful for you right now?";
+  }
+
+  // ── Inspiration / design ──
+  if(m.includes('inspiration') || m.includes('design') || m.includes('style') || m.includes('modern') || m.includes('coastal') || m.includes('open concept') || m.includes('layout')){
+    return "Love that you're thinking about the design side — that's actually where Dream Space shines. They do a lot of coastal and open-concept work out here in the Lowcountry. Do you have any inspiration photos or a general style in mind? That would really help shape the conversation.";
+  }
+
+  // ── Flooring / materials ──
+  if(m.includes('floor') || m.includes('tile') || m.includes('countertop') || m.includes('cabinet') || m.includes('material') || m.includes('finish')){
+    return "Materials and finishes make such a huge difference in both the look and the longevity of a project — especially in the Lowcountry where humidity is a real factor. Is this for a specific room? I can give you a better sense of what Dream Space typically recommends.";
+  }
+
+  // ── Default: intelligent fallback ──
+  frankContext = null;
+  return pickRandom([
+    "That's a great question — let me make sure I point you in the right direction. Can you tell me a little more about what you're working on or what you're trying to figure out?",
+    "I want to make sure I give you the most helpful answer. Can you share a bit more context about your project or situation?",
+    "Good question. I'd love to help — can you tell me more? What space or project are you thinking about, and what's the main thing you're trying to solve?"
+  ]);
+}
+
+function sc(){
+  const inp = document.getElementById('cin');
+  const text = inp.value.trim();
+  if(!text) return;
+  addMsg(text, 'user');
+  inp.value = '';
+  document.getElementById('csugg').style.display = 'none';
+  showTyping();
+  const reply = getFrankReply(text);
+  const delay = Math.min(700 + reply.length * 15, 2500);
+  setTimeout(()=>{ rmTyping(); addMsg(reply, 'bot'); }, delay);
+}
+
+function qs(el){
+  const text = el.textContent;
+  addMsg(text, 'user');
+  document.getElementById('csugg').style.display = 'none';
+  showTyping();
+  const reply = getFrankReply(text);
+  const delay = Math.min(700 + reply.length * 15, 2500);
+  setTimeout(()=>{ rmTyping(); addMsg(reply, 'bot'); }, delay);
+}
+
+// ── FRANK DRAGGABLE — all directions, mobile & desktop ──
+(function(){
+  const widget = document.querySelector('.chat');
+  const bubble = document.getElementById('frankBtn');
+  if(!widget || !bubble) return;
+
+  let moved = false;
+
+  function clamp(v, lo, hi){ return Math.max(lo, Math.min(hi, v)); }
+
+  function place(left, bottom){
+    widget.style.position = 'fixed';
+    widget.style.left   = clamp(left,   10, window.innerWidth  - 70) + 'px';
+    widget.style.bottom = clamp(bottom, 10, window.innerHeight - 70) + 'px';
+    widget.style.right  = 'auto';
+    widget.style.top    = 'auto';
+  }
+
+  // TOUCH
+  bubble.addEventListener('touchstart', function(e){
+    const t  = e.touches[0];
+    const r  = widget.getBoundingClientRect();
+    const sx = t.clientX, sy = t.clientY;
+    const ox = r.left,    oy = window.innerHeight - r.bottom;
+    moved = false;
+
+    function onMove(ev){
+      const p  = ev.touches[0];
+      const dx = p.clientX - sx;
+      const dy = p.clientY - sy;
+      if(Math.abs(dx) > 5 || Math.abs(dy) > 5){
+        moved = true;
+        if(ev.cancelable) ev.preventDefault(); // stop page scroll while dragging
+        place(ox + dx, oy - dy);
+      }
+    }
+    function onEnd(){
+      document.removeEventListener('touchmove', onMove);
+      document.removeEventListener('touchend',  onEnd);
+      if(!moved) tc();
+      moved = false;
+    }
+    // passive:false so we can preventDefault and move in ALL directions
+    document.addEventListener('touchmove', onMove, {passive:false});
+    document.addEventListener('touchend',  onEnd);
+  }, {passive:true});
+
+  // MOUSE
+  bubble.addEventListener('mousedown', function(e){
+    e.preventDefault();
+    const r  = widget.getBoundingClientRect();
+    const sx = e.clientX, sy = e.clientY;
+    const ox = r.left,    oy = window.innerHeight - r.bottom;
+    moved = false;
+
+    function onMove(ev){
+      const dx = ev.clientX - sx;
+      const dy = ev.clientY - sy;
+      if(Math.abs(dx) > 4 || Math.abs(dy) > 4){
+        moved = true;
+        place(ox + dx, oy - dy);
+      }
+    }
+    function onUp(){
+      document.removeEventListener('mousemove', onMove);
+      document.removeEventListener('mouseup',   onUp);
+      if(!moved) tc();
+      moved = false;
+    }
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup',   onUp);
+  });
+
+})();
+</script>
+</body>
+</html>
